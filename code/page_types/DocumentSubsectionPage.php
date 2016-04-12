@@ -57,6 +57,31 @@ Class DocumentSubsectionPage extends Page
         return $fields;
     }
 
+    public function subSectionTerms()
+    {
+        $terms = $this->Parent()->Parent()->GlossaryTerms();
+
+        return $terms;
+    }
+
+
+    /**
+     * function to add glossary terms to content
+     */
+    public function EvolvedContent()
+    {
+        $termsList = new ArrayList();
+
+        $terms = $this->subSectionTerms();
+        foreach($terms as $t){
+            $termsList->push($t);
+        }
+
+        $content = $this->Content;
+
+        return $termsList;
+    }
+
     public function AddTagClass()
     {
         $returnString = "";

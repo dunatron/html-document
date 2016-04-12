@@ -56,6 +56,14 @@
 
                                     <div class="$AddTagClass">
                                         $Content
+
+                                        <h3>SectionID:$ParentID</h3>
+                                        <h3>DocumentID:$GrandParentID</h3>
+                                        <% loop $EvolvedContent %>
+                                            $Title
+                                            $Description
+                                        <% end_loop %>
+
                                     </div>
                                     <div class="$AddTagClass row p-and-b">
                                         <div class="pull-right">

@@ -9,7 +9,10 @@ class DocumentSubsectionPage_Controller extends Page_Controller
 {
 
     private static $allowed_actions = array(
-        'MyTags'
+        'MyTags',
+        'subSectionTerms'
     );
+
+
 
 }
