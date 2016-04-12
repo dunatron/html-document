@@ -1,0 +1,23 @@
+{
+  "name": "dunatron/silverstripe-tron-doc-report",
+  "description": "Add's the ability to create HTML Documents from pdf, doc, docx.",
+  "keywords": [
+    "silverstripe",
+    "html",
+    "doc",
+    "docx",
+    "pdf",
+    "document"
+  ],
+  "type": "silverstripe-module",
+  "extra": {
+    "installer-name": "tron-doc-report"
+  },
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Dunatron",
+      "email": "heath.dunlop.hd@gmail.com"
+    }
+  ]
+}

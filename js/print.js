@@ -1,0 +1,1 @@
+function printPage(a){alert("The print button was clicked.")}
