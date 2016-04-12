@@ -2,29 +2,32 @@
 
     <div class="col-md-3">
         <h1>Contents</h1>
-        <nav>
-            <ul class="nav toc-sidenav">
-                <% if $Children %>
-                    <% loop $Children %>
-                        <li>
-                            <a class="$AddTagClass <% if $Last %><% if not $Children %>last-child<% end_if %><% end_if %>"
-                               href="#{$URLSegment}"> $SectionNumber $Title</a>
-                            <% if $Children %>
-                                <ul class="nav">
-                                    <% loop $Children %>
-                                        <% if $ClassName = 'DocumentSubsectionPage' %>
-                                            <li>
-                                                <a class="$AddTagClass <% if $Up.Last %><% if $Last %>last-child<% end_if %><% end_if %>"
-                                                   href="#{$URLSegment}">$SubsectionNumber $Title</a></li>
-                                        <% end_if %>
-                                    <% end_loop %>
-                                </ul>
-                            <% end_if %>
-                        </li>
-                    <% end_loop %>
-                <% end_if %>
-            </ul>
-        </nav>
+        <div class="doc-left-panel">
+            <nav id="doc-sidebar">
+                <ul class="nav sticky-sidebar">
+                    <% if $Children %>
+                        <% loop $Children %>
+                            <li>
+                                <a class="$AddTagClass <% if $Last %><% if not $Children %>last-child<% end_if %><% end_if %>"
+                                   href="#{$URLSegment}"> $SectionNumber $Title</a>
+                                <% if $Children %>
+                                    <ul class="nav">
+                                        <% loop $Children %>
+                                            <% if $ClassName = 'DocumentSubsectionPage' %>
+                                                <li>
+                                                    <a class="$AddTagClass <% if $Up.Last %><% if $Last %>last-child<% end_if %><% end_if %>"
+                                                       href="#{$URLSegment}">$SubsectionNumber $Title</a></li>
+                                            <% end_if %>
+                                        <% end_loop %>
+                                    </ul>
+                                <% end_if %>
+                            </li>
+                        <% end_loop %>
+                    <% end_if %>
+                </ul>
+            </nav>
+        </div>
+
     </div>
 
     <div class="col-md-9">
