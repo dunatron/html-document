@@ -45,9 +45,7 @@
                     <div class="$AddTagClass row p-and-b">
                         <div class="pull-right">
                             <a class="print-button button light-green" title="Click to print this section"
-                               onclick="printPage('$URLSegment');return false;"><img class="print-img"
-                                                                                     alt="Print this section"
-                                                                                     src="$ThemeDir/images/print.png"></a>
+                               onclick="printPage('$URLSegment');return false;"><i class="fa fa-print" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <% if $Children %>
@@ -61,14 +59,10 @@
                                     </div>
                                     <div class="$AddTagClass row p-and-b">
                                         <div class="pull-right">
-                                            <a href="#" class="back-to-top-button button"><img class="top-img"
-                                                                                               alt="Back to the top of page"
-                                                                                               src="$ThemeDir/images/back-to-top.png"></a>
+                                            <a href="#" class="back-to-top-button button"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
                                             <a class="print-button button light-green"
                                                title="Click to print this sub-section"
-                                               onclick="printPage('$URLSegment');return false;"><img class="print-img"
-                                                                                                     alt="Print this subsection"
-                                                                                                     src="$ThemeDir/images/print.png"></a>
+                                               onclick="printPage('$URLSegment');return false;"><i class="fa fa-print" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -80,5 +74,32 @@
         </div>
     </div>
 
+    <%-- Glossary Terms Section --%>
+    <div class="col-md-3">
+
+    </div>
+
+    <div class="col-md-9">
+        <div class="tag-section">
+
+            <% if GlossaryTerms %>
+                <h3 class="subsection-content">This content refers to the following glossary terms:</h3>
+                <% loop GlossaryTerms %>
+                    <a href="{$BaseHref}Glossary?letter={$FirstLetter}#{$Title}" class="button grey">
+                        $Title
+                    </a>
+                <% end_loop %>
+            <% end_if %>
+
+            <% if VocabularyTags %>
+                <h3 class="subsection-content">Tagged with the terms:</h3>
+                <% loop VocabularyTags %>
+                    <a href="{$BaseHref}siteSearch?Keyword=$Title&clicked=true" class="button grey">
+                        $Title
+                    </a>
+                <% end_loop %>
+            <% end_if %>
+        </div>
+    </div>
 
 </div>

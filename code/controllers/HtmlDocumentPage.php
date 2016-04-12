@@ -18,6 +18,8 @@ class HtmlDocumentPage_Controller extends Page_Controller
     {
         parent::init();
         Requirements::css("doc-report/css/html-doc-base.css");
+        Requirements::css(" https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css");
+
 
         Requirements::javascript("http://code.jquery.com/jquery-1.9.0.js");
         Requirements::css("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");

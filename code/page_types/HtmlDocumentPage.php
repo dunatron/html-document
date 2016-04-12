@@ -47,13 +47,13 @@ class HtmlDocumentPage extends Page
 
     private static $searchable_fields = array();
 
-//    private static $allowed_children = array("DocumentSectionPage");
-//
-//    private static $default_child = "DocumentSectionPage";
+    private static $allowed_children = array("DocumentSectionPage");
+
+    private static $default_child = "DocumentSectionPage";
 
     private static $default_parent = null;
 
-//    private static $can_be_root = false;
+    private static $can_be_root = true;
 
     private static $hide_ancestor = null;
 
