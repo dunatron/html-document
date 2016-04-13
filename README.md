@@ -14,6 +14,15 @@ composer require dunatron/silverstripe-samdog-html-doc
 # Usage
 This module creates an Html Document which has sections, sub-sections and a glossary page for terms of note.
 
+# New Page Types
+* HtmlDocumentPage
+* DocumentSectionPage
+* DocumentSubsectionPage
+* GlossaryPage
+
+# New DataObject
+* GlossaryTerm
+
 # Licensing
 This module is licensed under the BSD license
 
