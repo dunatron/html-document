@@ -65,6 +65,38 @@ class DocumentSectionPage extends Page
         return $fields;
     }
 
+    /**
+     * Get Document Glossary Terms for Section
+     */
+    public function SectionTerms()
+    {
+        $terms = $this->Parent()->GlossaryTerms();
+
+        return $terms;
+    }
+
+    /**
+     * function to add glossary terms to content
+     */
+    public function EvolvedContent()
+    {
+        $termsList = new ArrayList();
+        $contents = $this->Content;
+
+        $terms = $this->SectionTerms();
+        foreach($terms as $t){
+            $termsList->push($t);
+            if (preg_match("/$t->Title/i", "$contents")){
+                $contents = str_replace("$t->Title", '<a href="javaScript:void(0);" class="tooltip" title="' .$t->Description .'">'.$t->Title.'</a>',"$contents");
+            }else {
+                continue;
+            }
+        }
+
+        return $contents;
+
+    }
+
     public function AddTagClass()
     {
         $returnString = "";

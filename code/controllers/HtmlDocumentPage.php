@@ -17,14 +17,14 @@ class HtmlDocumentPage_Controller extends Page_Controller
     public function init()
     {
         parent::init();
-        Requirements::css("doc-report/css/html-doc-base.css");
+        Requirements::css("html-doc-builder/css/html-doc-base.css");
         Requirements::css(" https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css");
 
 
         Requirements::javascript("http://code.jquery.com/jquery-1.9.0.js");
-        Requirements::css("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
-        Requirements::javascript("doc-report/js/print.js");
-        Requirements::javascript("doc-report/js/affix-sidebar.js");
+//        Requirements::css("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+        Requirements::javascript("html-doc-builder/js/print.js");
+        Requirements::javascript("html-doc-builder/js/affix-sidebar.js");
         //ToDo I didn't really understand what was going on here
         //ToDo Also need to get css added in here for default templates
         //ToDo Then it can be overwritten? find a way to easily not use our template

@@ -39,7 +39,7 @@
                     <h2 class=" $AddTagClass<% if $Children %><% loop $Children %>$AddTagClass <% if $Children %><% loop $Children %>$AddTagClass<% end_loop %><% end_if %><% end_loop %><% end_if %> section-title">$SectionNumber $Title</h2>
                     <% if $Content %>
                         <div class="$AddTagClass">
-                            $Content
+                            $EvolvedContent
                         </div>
                     <% end_if %>
                     <div class="$AddTagClass row p-and-b">
@@ -55,11 +55,9 @@
                                     <h3 class=" $AddTagClass subsection-title">$SubsectionNumber $Title</h3>
 
                                     <div class="$AddTagClass">
-                                        $Content
                                         <h3>SectionID:$ParentID</h3>
                                         <h3>DocumentID:$GrandParentID</h3>
                                         $EvolvedContent
-
                                     </div>
                                     <div class="$AddTagClass row p-and-b">
                                         <div class="pull-right">

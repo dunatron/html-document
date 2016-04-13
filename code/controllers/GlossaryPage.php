@@ -17,7 +17,7 @@ class GlossaryPage_Controller extends Page_Controller{
 
     public function init(){
         parent::init();
-        Requirements::css("doc-report/css/html-doc-glossary.css");
+        Requirements::css("html-doc-builder/css/html-doc-glossary.css");
 //        $this->ResetHistory();
         $this->letter = (isset($_GET['letter'])) ? $_GET['letter'] : '';
     }

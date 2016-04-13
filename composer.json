@@ -1,5 +1,5 @@
 {
-  "name": "dunatron/silverstripe-tron-doc-report",
+  "name": "dunatron/silverstripe-samdog-html-doc",
   "description": "Add's the ability to create HTML Documents from pdf, doc, docx.",
   "keywords": [
     "silverstripe",
@@ -11,7 +11,7 @@
   ],
   "type": "silverstripe-module",
   "extra": {
-    "installer-name": "tron-doc-report"
+    "installer-name": "html-doc-builder"
   },
   "license": "BSD-3-Clause",
   "authors": [

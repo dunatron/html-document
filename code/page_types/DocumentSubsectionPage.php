@@ -57,13 +57,15 @@ Class DocumentSubsectionPage extends Page
         return $fields;
     }
 
+    /**
+     * Get Document Glossary Terms for Subsection
+     */
     public function subSectionTerms()
     {
         $terms = $this->Parent()->Parent()->GlossaryTerms();
 
         return $terms;
     }
-
 
     /**
      * function to add glossary terms to content
