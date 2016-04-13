@@ -30,10 +30,10 @@
 
     </div>
 
-    <div class="col-md-9">
+    <div class="col-md-9 doc-right-panel">
         <h1>Body</h1>
 
-        <div class="requirement-information-section">
+        <div class="document-information-section">
             <% loop $Children %>
                 <div id="$URLSegment" class="section-content <% if $Pos = 1 %>$AddTagClass introduction<% end_if %>">
                     <h2 class=" $AddTagClass<% if $Children %><% loop $Children %>$AddTagClass <% if $Children %><% loop $Children %>$AddTagClass<% end_loop %><% end_if %><% end_loop %><% end_if %> section-title">$SectionNumber $Title</h2>
@@ -56,13 +56,9 @@
 
                                     <div class="$AddTagClass">
                                         $Content
-
                                         <h3>SectionID:$ParentID</h3>
                                         <h3>DocumentID:$GrandParentID</h3>
-                                        <% loop $EvolvedContent %>
-                                            $Title
-                                            $Description
-                                        <% end_loop %>
+                                        $EvolvedContent
 
                                     </div>
                                     <div class="$AddTagClass row p-and-b">

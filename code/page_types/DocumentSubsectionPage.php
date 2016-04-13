@@ -71,15 +71,20 @@ Class DocumentSubsectionPage extends Page
     public function EvolvedContent()
     {
         $termsList = new ArrayList();
+        $contents = $this->Content;
 
         $terms = $this->subSectionTerms();
         foreach($terms as $t){
             $termsList->push($t);
+            if (preg_match("/$t->Title/i", "$contents")){
+                $contents = str_replace("$t->Title", '<a href="javaScript:void(0);" class="tooltip" title="' .$t->Description .'">'.$t->Title.'</a>',"$contents");
+            }else {
+                continue;
+            }
         }
 
-        $content = $this->Content;
+        return $contents;
 
-        return $termsList;
     }
 
     public function AddTagClass()

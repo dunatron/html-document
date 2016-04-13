@@ -9,7 +9,7 @@ class GlossaryTerm extends DataObject implements PermissionProvider{
 
     private static $db = array(
         'Title' 		=> 'Varchar(255)',
-        'Description' 	=> 'HTMLText'
+        'Description' 	=> 'Varchar(255)'
     );
 
     private static $has_one = array();
