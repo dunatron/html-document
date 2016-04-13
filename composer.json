@@ -1,5 +1,5 @@
 {
-  "name": "dunatron/silverstripe-samdog-html-doc",
+  "name": "dunatron/silverstripe-samdog-html-doc-builder",
   "description": "Add's the ability to create HTML Documents from pdf, doc, docx.",
   "keywords": [
     "silverstripe",
