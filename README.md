@@ -1,4 +1,4 @@
-# silverstripe-tron-doc-report
+# silverstripe-samdog-doc-report
 Module to create an HTML report
 # Install instructions
 composer require dunatron/silverstripe-samdog-html-doc
